@@ -11,10 +11,18 @@ function HomePage() {
         backgroundPosition: "",
         height: "100vh", // adjust the height as needed
       }}
-    >
-      Home
-    </div>
+    ></div>
   );
 }
 
 export default HomePage;
+
+/* <div className="mt-[5rem]">
+        <p className="text-4xl">
+          Pure Grain, Pure Quality. Nourishing Every Grain of Life
+        </p>
+        <p className="text-xl">
+          This highlights the quality and essential nature of your product,
+          giving a strong and positive impression to your customers.
+        </p>
+      </div> */

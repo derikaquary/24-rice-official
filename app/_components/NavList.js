@@ -15,9 +15,9 @@ function NavList({ isMenuOpen }) {
 
   return (
     <nav
-      className={`sm:flex ${isMenuOpen ? "absolute left-0 top-[4rem] w-full bg-gray-800" : "hidden"} sm:relative sm:flex-row sm:space-x-6`}
+      className={`lg:flex ${isMenuOpen ? "absolute left-0 top-[4rem] w-full bg-gray-800" : "hidden"} lg:relative lg:flex-row lg:space-x-6`}
     >
-      <ul className="flex flex-col gap-4 px-5 py-4 text-xl text-white sm:flex-row sm:items-center sm:space-x-6">
+      <ul className="flex flex-col gap-4 px-5 py-4 text-xl text-white lg:flex-row lg:items-center lg:space-x-6">
         <li>
           <Link href="/" passHref>
             <span
@@ -59,7 +59,7 @@ function NavList({ isMenuOpen }) {
           </Link>
           <button onClick={() => setIsPagesOpen(!isPagesOpen)}>X</button>
           {isPagesOpen && (
-            <div className="mx-auto flex flex-col gap-4 rounded-lg border border-white py-2 pl-5 sm:hidden">
+            <div className="mx-auto flex flex-col gap-4 rounded-lg border border-white py-2 pl-5 lg:hidden">
               <Link href="/gallery" passHref>
                 <span
                   onClick={() => handleClick("/gallery")}
@@ -97,7 +97,7 @@ function NavList({ isMenuOpen }) {
             </span>
           </Link>
         </li>
-        <li className="sm:mb-5 sm:mt-5">
+        <li className="lg:mb-5 lg:mt-5">
           <Link href="/contactus" passHref>
             <span
               onClick={() => handleClick("/contactus")}

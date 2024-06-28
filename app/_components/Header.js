@@ -6,8 +6,6 @@ export default function Header() {
   return (
     <header className="fixed flex w-full flex-col gap-4">
       <HeaderTopBar />
-
-      {/* Navbar */}
       <HeaderBottom />
     </header>
   );
