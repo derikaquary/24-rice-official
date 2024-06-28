@@ -17,7 +17,7 @@ function NavList({ isMenuOpen }) {
     <nav
       className={`sm:flex ${isMenuOpen ? "absolute left-0 top-[4rem] w-full bg-gray-800" : "hidden"} sm:relative sm:flex-row sm:space-x-6`}
     >
-      <ul className="flex flex-col items-center gap-4 px-5 py-4 text-xl text-white sm:flex-row sm:space-x-6">
+      <ul className="flex flex-col gap-4 px-5 py-4 text-xl text-white sm:flex-row sm:space-x-6">
         <li>
           <Link href="/" passHref>
             <span
