@@ -1,28 +1,31 @@
 import React from "react";
+import background from "@/public/background.jpg";
+import Image from "next/image";
 
-function HomePage() {
+function Page() {
   return (
-    <div
-      className="h-screen w-full"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/background.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "",
-        height: "100vh", // adjust the height as needed
-      }}
-    ></div>
-  );
-}
+    <div className="relative z-[-10] h-screen bg-gray-800">
+      <Image
+        src={background}
+        fill
+        placeholder="blur"
+        alt="a women walking in the midle of rice field"
+        className="mt-[7rem] object-cover object-top sm:mt-[0rem] md:mt-[1rem] lg:mt-[3rem]"
+      />
+      {/*black overlay */}
+      <div className="absolute inset-0 mt-[7rem] h-screen bg-black opacity-50 sm:mt-[0rem] sm:hidden md:mt-[1rem] lg:mt-[3rem]"></div>
 
-export default HomePage;
-
-/* <div className="mt-[5rem]">
+      <div className="absolute left-0 right-0 top-[20rem] flex flex-col items-center justify-center gap-4 text-center text-white sm:hidden">
         <p className="text-4xl">
           Pure Grain, Pure Quality. Nourishing Every Grain of Life
         </p>
         <p className="text-xl">
-          This highlights the quality and essential nature of your product,
-          giving a strong and positive impression to your customers.
+          Our commitment to quality ensures that every grain is meticulously
+          selected and processed to bring you the best in taste and nutrition.
         </p>
-      </div> */
+      </div>
+    </div>
+  );
+}
+
+export default Page;

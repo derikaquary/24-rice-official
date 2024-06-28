@@ -1,8 +1,14 @@
 import { Inter } from "next/font/google";
 import "../app/_styles/globals.css";
 import Header from "./_components/Header";
+import { Montserrat } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 export const metadata = {
   title: "Rice Official",
@@ -12,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <Header />
         <main>{children}</main>
       </body>
