@@ -15,7 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body
+        className={`relative min-h-screen ${montserrat.className} h-screen`}
+      >
         <Header />
         <main>{children}</main>
       </body>
