@@ -4,7 +4,7 @@ import Navigation from "./Navigation";
 function HeaderBottom() {
   return (
     <>
-      <div className="container relative mx-auto flex max-w-7xl items-center justify-between px-5 lg:px-4 lg:py-7">
+      <div className="container relative mx-auto flex max-w-7xl items-center justify-between px-5 lg:px-4">
         <LogoRice />
         <Navigation />
       </div>

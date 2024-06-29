@@ -4,7 +4,7 @@ import HeaderBottom from "./HeaderBottom";
 
 export default function Header() {
   return (
-    <header className="fixed z-20 flex w-full flex-col gap-4">
+    <header className="fixed left-0 right-0 top-0 z-20 flex h-[250px] w-full flex-col gap-[1rem] lg:h-[200px] lg:gap-1">
       <HeaderTopBar />
       <HeaderBottom />
     </header>

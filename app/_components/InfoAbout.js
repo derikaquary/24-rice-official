@@ -3,7 +3,7 @@ import Image from "next/image";
 function InfoAbout({ src, alt, children }) {
   return (
     <>
-      <div className="relative aspect-square h-[300px]">
+      <div className="aspect-square h-[300px]">
         <Image
           src={src}
           fill
