@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { IoIosArrowDropdown } from "react-icons/io";
+import { IoIosArrowDropup } from "react-icons/io";
 
 function NavList({ isMenuOpen }) {
   const [isPagesOpen, setIsPagesOpen] = useState(false);
@@ -48,18 +50,22 @@ function NavList({ isMenuOpen }) {
             </span>
           </Link>
         </li>
-        <li>
-          <Link href="/pages" passHref>
-            <span
-              onClick={() => handleClick("/pages")}
-              className={`${activeLink === "/pages" ? "text-yellow-400" : ""}`}
-            >
-              Pages
-            </span>
-          </Link>
-          <button onClick={() => setIsPagesOpen(!isPagesOpen)}>X</button>
+        <li className="sm:relative">
+          <div className="flex items-center">
+            <Link href="/pages" passHref>
+              <span
+                onClick={() => handleClick("/pages")}
+                className={`${activeLink === "/pages" ? "text-yellow-400" : ""} mr-3`}
+              >
+                Pages
+              </span>
+            </Link>
+            <button onClick={() => setIsPagesOpen(!isPagesOpen)}>
+              {isPagesOpen ? <IoIosArrowDropup /> : <IoIosArrowDropdown />}
+            </button>
+          </div>
           {isPagesOpen && (
-            <div className="mx-auto flex flex-col gap-4 rounded-lg border border-white py-2 pl-5 lg:hidden">
+            <div className="mx-auto flex flex-col gap-4 rounded-lg border border-white py-2 pl-5 sm:absolute sm:bg-gray-800/40 sm:px-3 sm:backdrop-blur-sm">
               <Link href="/gallery" passHref>
                 <span
                   onClick={() => handleClick("/gallery")}

@@ -1,6 +1,7 @@
 import React from "react";
 import background from "@/public/background.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 function Page() {
   return (
@@ -23,6 +24,14 @@ function Page() {
           Our commitment to quality ensures that every grain is meticulously
           selected and processed to bring you the best in taste and nutrition.
         </p>
+      </div>
+      <div className="sm absolute left-0 right-0 top-[40rem] flex items-center justify-center sm:top-[30rem]">
+        <Link
+          href="/shop"
+          className="back rounded-md border border-white bg-yellow-300 px-4 py-5 text-2xl font-bold text-gray-800 backdrop-blur-sm sm:bg-yellow-300/30 sm:text-3xl sm:font-medium"
+        >
+          Explore our Store
+        </Link>
       </div>
     </div>
   );
