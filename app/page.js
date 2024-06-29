@@ -3,7 +3,6 @@ import background from "@/public/background.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import BlackOverlay from "./_components/BlackOverlay";
-import PageTextContainer from "./_components/PageTextContainer";
 
 function Page() {
   return (
@@ -23,7 +22,7 @@ function Page() {
         hidden={"hidden"}
       />
 
-      <PageTextContainer left={"0"} right={"0"} top={"20rem"} hidden={"hidden"}>
+      <div className="absolute left-0 right-0 top-[20rem] flex flex-col items-center justify-center gap-4 text-center text-white sm:hidden">
         <p className="text-4xl">
           Pure Grain, Pure Quality. Nourishing Every Grain of Life
         </p>
@@ -31,7 +30,7 @@ function Page() {
           Our commitment to quality ensures that every grain is meticulously
           selected and processed to bring you the best in taste and nutrition.
         </p>
-      </PageTextContainer>
+      </div>
 
       <div className="sm absolute left-0 right-0 top-[40rem] flex items-center justify-center sm:top-[30rem]">
         <Link

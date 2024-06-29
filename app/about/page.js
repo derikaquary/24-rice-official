@@ -1,5 +1,6 @@
 import Image from "next/image";
 import bgabout from "@/public/bg-about.jpg";
+import InfoAbout1 from "../_components/InfoAbout1"
 import BlackOverlay from "../_components/BlackOverlay";
 
 function page() {
@@ -14,6 +15,9 @@ function page() {
         className="object-cover"
       />
       <BlackOverlay />
+      <div className="absolute left-4 right-4 top-[14rem] flex flex-col items-center justify-center gap-4 text-justify text-white">
+        <InfoAbout1/>
+      </div>
     </div>
   );
 }
